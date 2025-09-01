@@ -244,6 +244,31 @@ body {
   height: auto;
 }
 
+/* Center the container and inner elements */
+.background-image-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background-image-section .has-text-centered {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure the image is perfectly centered */
+.background-image-section .background-image {
+  display: block;
+  margin: 0 auto !important;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
 /* Additional fallback for spacing issues */
 .background-image-section {
   line-height: 0 !important;
