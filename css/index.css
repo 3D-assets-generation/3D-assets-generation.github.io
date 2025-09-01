@@ -10,10 +10,23 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .navbar-item {
   font-weight: 500;
   color: #363636 !important;
   transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
 }
 
 .navbar-item:hover {
@@ -31,7 +44,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 40vh;
+  margin-bottom: 0;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+  text-align: center;
 }
 
 .hero-body {
@@ -40,7 +58,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem 3rem 1.5rem;
 }
 
 
@@ -123,20 +141,193 @@ body {
   display: inline-block;
 }
 
-/* Card styling for speakers and organizers */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 8px;
+/* Hero section boxes */
+.hero .box {
   border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
 }
 
-.card:hover {
+.hero .box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Honolulu image section */
+.honolulu-image {
+  transition: transform 0.3s ease;
+}
+
+.honolulu-image:hover {
+  transform: scale(1.02);
+}
+
+/* Conference venue image */
+.venue-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 80px;
+  width: 100%;
+}
+
+.venue-image:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.venue-image-container {
+  margin-bottom: 0.5rem;
+}
+
+/* Background image above overview */
+.background-image {
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.background-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Move background image into hero section */
+.background-image-section {
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative;
+  top: 0;
+}
+
+/* Reduce top margin of overview section */
+#introduction.section {
+  padding-top: 0.5rem !important;
+}
+
+/* Reduce hero section bottom spacing */
+.hero-body {
+  padding-bottom: 0.25rem !important;
+  text-align: center;
+  width: 100%;
+}
+
+/* Reduce spacing between title and info boxes */
+.hero .title {
+  margin-bottom: 0.1rem !important;
+}
+
+/* Reduce spacing between main title and subtitle */
+.hero .title.is-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+/* Reduce spacing between info boxes and bottom */
+.hero .columns {
+  margin-bottom: 0 !important;
+}
+
+/* Reduce spacing within info boxes */
+.hero .box {
+  padding: 0.5rem !important;
+  margin: 0.1rem !important;
+}
+
+
+
+
+
+/* New template styling for speakers and organizers */
+.speakers-grid,
+.organizers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.speaker-item,
+.organizer-item {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaker-item:hover,
+.organizer-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.card-content {
-  padding: 1.5rem;
+.speaker-avatar,
+.organizer-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.speaker-avatar img,
+.organizer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  font-size: 2rem;
+  color: #ccc;
+}
+
+.speaker-name,
+.organizer-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #363636;
+}
+
+.speaker-affiliation,
+.organizer-affiliation {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Compact layout for speakers and organizers */
+.speakers-section .columns,
+.organizers-section .columns {
+  margin: 0;
+}
+
+.speakers-section .column,
+.organizers-section .column {
+  padding: 0.5rem;
+}
+
+/* Reduce section padding for more compact layout */
+.speakers-section.section,
+.organizers-section.section {
+  padding: 2rem 1.5rem;
+}
+
+/* Ensure images are properly displayed */
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fallback for missing images */
+.card-image img[src*="placeholder"] {
+  background-color: #f0f0f0;
+  border: 1px dashed #ccc;
 }
 
 /* Table styling for schedule */

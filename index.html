@@ -21,60 +21,86 @@
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <strong>3D Asset Synthesis</strong>
-        </a>
-      </div>
-      
-      <div class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item" href="#introduction">Introduction</a>
-          <a class="navbar-item" href="#schedule">Schedule</a>
+        <div class="navbar-menu">
+          <a class="navbar-item" href="#introduction">Overview</a>
           <a class="navbar-item" href="#speakers">Speakers</a>
+          <a class="navbar-item" href="#schedule">Schedule</a>
           <a class="navbar-item" href="#organizers">Organizers</a>
         </div>
       </div>
     </div>
   </nav>
 
-<section class="hero" style="background: url('imgs/teaser.png') no-repeat center center fixed; background-size: cover;">
-  <div class="hero-body has-text-centered" style="background-color: rgba(255,255,255,0.85);">
-    <h1 class="title is-1"><br>Foundation Models for 3D Asset Synthesis</h1>
-  
-
-     <p style="font-size: 24px; font-weight: bold;">
-      <!-- <em>Skywork Multimodality Team</em> -->
-      </p>
-  
-    <!-- <p style="margin-top:1rem;">
-      <a href="https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/assets/pdf/UNIPIC2.pdf" class="button is-dark is-small is-rounded">
-        <span class="icon"><i class="ai ai-arxiv"></i></span><span>Technical Report</span>
-      </a>
-      <a href="https://github.com/SkyworkAI/UniPic/tree/main/UniPic-2" class="button is-dark is-small is-rounded">
-        <span class="icon"><i class="fab fa-github"></i></span><span>GitHub</span>
-      </a>
-      <a href="https://huggingface.co/collections/Skywork/skywork-unipic2-6899b9e1b038b24674d996fd" class="button is-dark is-small is-rounded">
-        <span class="icon">🤗</span><span>HuggingFace</span>
-      </a>
-    </p> -->
+<section class="hero">
+  <div class="hero-body has-text-centered">
+    <div class="container">
+      <h1 class="title is-1 has-text-centered" style="margin-bottom: 2rem;">
+        ICCV 2025 Tutorial:
+      </h1>
+      <h2 class="title is-2 has-text-centered" style="margin-bottom: 2rem;">
+        Foundation Models for 3D Asset Synthesis
+      </h2>
+      
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <div class="box has-text-centered">
+            <p class="has-text-weight-bold">Date</p>
+            <p class="is-size-5">October 19, 2025</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="box has-text-centered">
+            <p class="has-text-weight-bold">Time</p>
+            <p class="is-size-5">1:00 PM-5:00 PM(PST)</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="box has-text-centered">
+            <p class="has-text-weight-bold">Location</p>
+            <p class="is-size-5">Honolulu, Hawaii</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<!-- INTRODUCTION -->
+
+<!-- Background Image Section -->
+<section class="section background-image-section">
+  <div class="container">
+    <div class="has-text-centered">
+      <img src="imgs/iccv_honolulu.jpg" alt="Background Image" 
+           class="background-image"
+           style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      
+
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
 <section class="section" id="introduction">
   <div class="container is-max-desktop">
-    <h2 class="title is-2 has-text-centered">Introduction</h2>
+    <h2 class="title is-2 has-text-centered">Overview</h2>
     
     <!-- Abstract Text -->
     <div class="content has-text-justified">
-      <p>In recent years, thanks to the continuous innovation and progress of diffusion technology, significant advancements have been made in image and video generation. By inputting textual descriptions or images, we can generate high-quality images or videos, which greatly enhance creative efficiency and imagination. However, progress in the 3D generation field has been relatively slow. Initially, optimization routes, represented by DreamFusion, were explored. This was followed by the exploration of reconstruction routes, such as LRM. It was only later that diffusion based on 3D generation techniques, similar to those in image and video generation, were gradually developed. In addition, based on the token-by-token prediction form similar to LLM, 3D generation based on autoregressive method has gradually made significant progress.</p>
+      <p>Diffusion models and autoregressive models have achieved groundbreaking progress in image and video generation, enabling the synthesis of high-fidelity content from text or image conditional inputs. However, extending these successes into 3D generation still faces significant challenges. Early optimization-based methods (e.g., DreamFusion) and reconstruction-based methods (e.g., LRM) laid the groundwork for this field, but often suffer from limited scalability, insufficient generation quality, or poor generalization. With further research, and inspired by the breakthroughs in image and video generation tasks, diffusion- and autoregressive-based methods for 3D generation have gradually emerged, opening new directions for 3D asset creation.</p>
       
-      <p>Therefore, this tutorial focuses on the topic of 3D asset generation using diffusion and autoregression, specifically including:</p>
-      
+      <p>This tutorial will provide a systematic introduction to diffusion- and autoregressive-based 3D content generation, with a focus on data processing, algorithmic design, model training, and application prospects. Specifically, we will cover:</p>
       <ol>
-        <li><strong>Geometry generation modeling based on the diffusion paradigm.</strong></li>
-        <li><strong>Geometry generation modeling based on the autoregression paradigm.</strong></li>
-        <li><strong>Texture generation modeling based on the diffusion paradigm.</strong></li>
+        <li><strong>Diffusion-based modeling for 3D geometry and texture generation</strong></li>
+        <li><strong>Autoregressive paradigms for 3D generation</strong></li>
+        <li><strong>3D part generation</strong></li>
+        <li><strong>3D material generation</strong></li>
       </ol>
+      <p>The goal of this tutorial is to bridge fundamental research in 3D generative modeling with practical applications in 3D asset creation. It is designed for a diverse audience:</p>
+      <ul>
+        <li>Students and researchers: to gain a deeper understanding of the latest progress in 3D generation and identify open scientific challenges.</li>
+        <li>Industry practitioners and developers: to master key techniques and explore pathways for deployment in creative and production tools.</li>
+        <li>Creators and enthusiasts: to experience the potential of 3D generation in creative practices and enhance efficiency and expressiveness in asset design.</li>
+      </ul>
+      <p>By consolidating current achievements and exploring future directions, this tutorial aims to help participants acquire a comprehensive understanding of the core techniques and challenges in 3D asset generation, providing inspiration for further academic research and industrial applications.</p>
     </div>
   </div>
 </section>
@@ -89,52 +115,49 @@
           <tr>
             <th>Time</th>
             <th>Programme</th>
+            <th>Speaker</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>09:00 - 09:10</td>
-            <td>Opening Remarks</td>
+            <td>1:00 PM - 1:10 PM</td>
+            <td>Introduction</td>
+            <td>Yangguang Li</td>
           </tr>
           <tr>
-            <td>09:10 - 10:10</td>
-            <td>Invited Talk: Foundation Models for 3D Asset Generation</td>
+            <td>1:10 PM - 1:50 PM</td>
+            <td>Diffusion-based modeling for 3D geometry and texture generation</td>
+            <td>Yangguang Li</td>
           </tr>
           <tr>
-            <td>10:10 - 10:20</td>
+            <td>1:50 PM - 2:00 PM</td>
             <td>Coffee Break</td>
+            <td>-</td>
           </tr>
           <tr>
-            <td>10:20 - 11:20</td>
-            <td>Technical Session: Diffusion-based 3D Generation</td>
+            <td>2:00 PM - 2:50 PM</td>
+            <td>Autoregressive paradigms for 3D generation</td>
+            <td>Angela Dai</td>
           </tr>
           <tr>
-            <td>11:20 - 13:30</td>
-            <td>Lunch Break</td>
-          </tr>
-          <tr>
-            <td>13:30 - 14:30</td>
-            <td>Technical Session: Autoregressive 3D Generation</td>
-          </tr>
-          <tr>
-            <td>14:30 - 14:40</td>
+            <td>2:50 PM - 3:00 PM</td>
             <td>Coffee Break</td>
+            <td>-</td>
           </tr>
           <tr>
-            <td>14:40 - 15:40</td>
-            <td>Technical Session: Texture Generation</td>
+            <td>3:00 PM - 3:50 PM</td>
+            <td>3D part generation</td>
+            <td>Minghao Chen</td>
           </tr>
           <tr>
-            <td>15:40 - 15:50</td>
+            <td>3:50 PM - 4:00 PM</td>
             <td>Coffee Break</td>
+            <td>-</td>
           </tr>
           <tr>
-            <td>15:50 - 16:50</td>
-            <td>Panel Discussion & Q&A</td>
-          </tr>
-          <tr>
-            <td>16:50 - 17:00</td>
-            <td>Closing Remarks</td>
+            <td>4:00 PM - 4:50 PM</td>
+            <td>3D material generation</td>
+            <td>Zhaoxi Chen</td>
           </tr>
         </tbody>
       </table>
@@ -142,104 +165,91 @@
   </div>
 </section>
 
-<!-- Method -->
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-2 has-text-centered">Methodology</h2>
-    <div class="content has-text-justified">
-      <p>Our approach combines state-of-the-art diffusion and autoregressive techniques for comprehensive 3D asset generation. The methodology encompasses both geometric and textural aspects of 3D content creation.</p>
-    </div>
-  </div>
-</section> -->
-
-<!-- Comparison -->
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-2 has-text-centered">Results & Comparison</h2>
-    <div class="content has-text-justified">
-      <p>Our framework demonstrates superior performance in generating high-quality 3D assets compared to existing methods. The combination of diffusion and autoregressive approaches enables more realistic and detailed 3D content generation.</p>
-    </div>
-  </div>
-</section> -->
 
 <!-- SPEAKERS -->
-<section class="section" id="speakers">
+<section class="section speakers-section" id="speakers">
   <div class="container is-max-desktop">
     <h2 class="title is-2 has-text-centered">Speakers</h2>
     <div class="columns is-multiline">
       <!-- Speaker 1 -->
-      <div class="column is-4">
+      <div class="column is-2">
         <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="imgs/yangguang_li.png" alt="Yangguang Li">
+            </figure>
+          </div>
           <div class="card-content has-text-centered">
             <div class="content">
-              <h4 class="title is-4">[Speaker Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
-              <p>[Brief description of expertise and research focus]</p>
+              <h4 class="title is-5">Yangguang Li</h4>
+              <p class="subtitle is-6">CUHK</p>
+              <a href="https://yg256li.github.io/" target="_blank" class="button is-small is-outlined">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>Profile</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
       
       <!-- Speaker 2 -->
-      <div class="column is-4">
+      <div class="column is-2">
         <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="imgs/angela_dai.jpeg" alt="Angela Dai">
+            </figure>
+          </div>
           <div class="card-content has-text-centered">
             <div class="content">
-              <h4 class="title is-4">[Speaker Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
-              <p>[Brief description of expertise and research focus]</p>
+              <h4 class="title is-5">Angela Dai</h4>
+              <p class="subtitle is-6">TUM</p>
+              <a href="https://www.3dunderstanding.org/team.html" target="_blank" class="button is-small is-outlined">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>Profile</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
       
       <!-- Speaker 3 -->
-      <div class="column is-4">
+      <div class="column is-2">
         <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="imgs/minghao_chen.png" alt="Minghao Chen">
+            </figure>
+          </div>
           <div class="card-content has-text-centered">
             <div class="content">
-              <h4 class="title is-4">[Speaker Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
-              <p>[Brief description of expertise and research focus]</p>
+              <h4 class="title is-5">Minghao Chen</h4>
+              <p class="subtitle is-6">Oxford</p>
+              <a href="https://silent-chen.github.io/" target="_blank" class="button is-small is-outlined">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>Profile</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
       
       <!-- Speaker 4 -->
-      <div class="column is-4">
+      <div class="column is-2">
         <div class="card">
-          <div class="card-content has-text-centered">
-            <div class="content">
-              <h4 class="title is-4">[Speaker Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
-              <p>[Brief description of expertise and research focus]</p>
-            </div>
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="imgs/zhaoxi_chen.jpeg" alt="Zhaoxi Chen">
+            </figure>
           </div>
-        </div>
-      </div>
-      
-      <!-- Speaker 5 -->
-      <div class="column is-4">
-        <div class="card">
           <div class="card-content has-text-centered">
             <div class="content">
-              <h4 class="title is-4">[Speaker Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
-              <p>[Brief description of expertise and research focus]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Speaker 6 -->
-      <div class="column is-4">
-        <div class="card">
-          <div class="card-content has-text-centered">
-            <div class="content">
-              <h4 class="title is-4">[Speaker Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
-              <p>[Brief description of expertise and research focus]</p>
+              <h4 class="title is-5">Zhaoxi Chen</h4>
+              <p class="subtitle is-6">NTU</p>
+              <a href="https://frozenburning.github.io/" target="_blank" class="button is-small is-outlined">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>Profile</span>
+              </a>
             </div>
           </div>
         </div>
@@ -249,101 +259,110 @@
 </section>
 
 <!-- ORGANIZERS -->
-<section class="section" id="organizers">
+<section class="section organizers-section" id="organizers">
   <div class="container is-max-desktop">
     <h2 class="title is-2 has-text-centered">Organizers</h2>
     <div class="columns is-multiline">
       <!-- Organizer 1 -->
-      <div class="column is-3">
+      <div class="column is-2">
         <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="imgs/wanli_ouyang.jpg" alt="Wanli Ouyang">
+            </figure>
+          </div>
           <div class="card-content has-text-centered">
             <div class="content">
-              <h4 class="title is-5">[Organizer Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
+              <h4 class="title is-5">Wanli Ouyang</h4>
+              <p class="subtitle is-6">CUHK</p>
+              <a href="https://scholar.google.com/citations?user=pw_0Z_UAAAAJ&hl=zh-CN" target="_blank" class="button is-small is-outlined">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>Google Scholar</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
       
       <!-- Organizer 2 -->
-      <div class="column is-3">
+      <div class="column is-2">
         <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="imgs/wei_li.jpg" alt="Wei Li">
+            </figure>
+          </div>
           <div class="card-content has-text-centered">
             <div class="content">
-              <h4 class="title is-5">[Organizer Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
+              <h4 class="title is-5">Wei Li</h4>
+              <p class="subtitle is-6">NTU</p>
+              <a href="https://weivision.github.io/" target="_blank" class="button is-small is-outlined">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>Website</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
       
       <!-- Organizer 3 -->
-      <div class="column is-3">
+      <div class="column is-2">
         <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="imgs/chenfeng_xu.png" alt="Chenfeng Xu">
+            </figure>
+          </div>
           <div class="card-content has-text-centered">
             <div class="content">
-              <h4 class="title is-5">[Organizer Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
+              <h4 class="title is-5">Chenfeng Xu</h4>
+              <p class="subtitle is-6">UC Berkeley</p>
+              <a href="https://www.chenfengx.com/" target="_blank" class="button is-small is-outlined">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>Website</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
       
       <!-- Organizer 4 -->
-      <div class="column is-3">
+      <div class="column is-2">
         <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="imgs/feng_liang.png" alt="Feng Liang">
+            </figure>
+          </div>
           <div class="card-content has-text-centered">
             <div class="content">
-              <h4 class="title is-5">[Organizer Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
+              <h4 class="title is-5">Feng(Jeff) Liang</h4>
+              <p class="subtitle is-6">Meta</p>
+              <a href="https://jeff-liangf.github.io/" target="_blank" class="button is-small is-outlined">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>Website</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
       
       <!-- Organizer 5 -->
-      <div class="column is-3">
+      <div class="column is-2">
         <div class="card">
-          <div class="card-content has-text-centered">
-            <div class="content">
-              <h4 class="title is-5">[Organizer Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
-            </div>
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="imgs/jingwen_he.png" alt="Jingwen He">
+            </figure>
           </div>
-        </div>
-      </div>
-      
-      <!-- Organizer 6 -->
-      <div class="column is-3">
-        <div class="card">
           <div class="card-content has-text-centered">
             <div class="content">
-              <h4 class="title is-5">[Organizer Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Organizer 7 -->
-      <div class="column is-3">
-        <div class="card">
-          <div class="card-content has-text-centered">
-            <div class="content">
-              <h4 class="title is-5">[Organizer Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Organizer 8 -->
-      <div class="column is-3">
-        <div class="card">
-          <div class="card-content has-text-centered">
-            <div class="content">
-              <h4 class="title is-5">[Organizer Name]</h4>
-              <p class="subtitle is-6">[Title]<br>[Institution/Company]</p>
+              <h4 class="title is-5">Jingwen He</h4>
+              <p class="subtitle is-6">CUHK</p>
+              <a href="https://scholar.google.com/citations?user=GUxrycUAAAAJ&hl=zh-CN" target="_blank" class="button is-small is-outlined">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>Google Scholar</span>
+              </a>
             </div>
           </div>
         </div>
@@ -353,14 +372,14 @@
 </section>
 
 <!-- ACK / CITATION -->
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Acknowledgement</h2>
     <div class="content has-text-justified">
       <p>We would like to express our gratitude to the research community for their contributions to 3D asset generation.</p>
     </div>
   </div>
-</section>
+</section> -->
 
   <footer class="footer">
     <div class="container"><div class="content has-text-centered">Template adapted from <a href="https://nerfies.github.io/">NERFies</a>, CC BY‑SA 4.0.</div></div>
