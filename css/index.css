@@ -190,12 +190,13 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-/* Move background image into hero section */
+/* Move background image into hero section - more explicit spacing control */
 .background-image-section {
   padding: 0 !important;
   margin: 0 !important;
   position: relative;
   top: 0;
+  margin-top: -3rem !important;
 }
 
 /* Reduce top margin of overview section */
@@ -208,6 +209,33 @@ body {
   padding-bottom: 0.25rem !important;
   text-align: center;
   width: 100%;
+  margin-bottom: 0 !important;
+}
+
+/* Additional spacing control for consistent deployment */
+.hero {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Ensure background image section has no extra spacing */
+.background-image-section {
+  margin-top: -3rem !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Force consistent spacing across all browsers */
+.background-image-section * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Additional fallback for spacing issues */
+.background-image-section {
+  line-height: 0 !important;
+  font-size: 0 !important;
 }
 
 /* Reduce spacing between title and info boxes */
@@ -223,6 +251,13 @@ body {
 /* Reduce spacing between info boxes and bottom */
 .hero .columns {
   margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Force tight spacing for hero content */
+.hero .container {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* Reduce spacing within info boxes */
