@@ -236,6 +236,14 @@ body {
   padding: 0 !important;
 }
 
+/* Center the background image */
+.background-image-section img {
+  display: block;
+  margin: 0 auto !important;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Additional fallback for spacing issues */
 .background-image-section {
   line-height: 0 !important;
