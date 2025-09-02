@@ -190,18 +190,17 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-/* Move background image into hero section - more explicit spacing control */
-.background-image-section {
-  padding: 0 !important;
-  margin: 0 !important;
-  position: relative;
-  top: 0;
-  margin-top: -3rem !important;
+/* Background image now in hero section - adjust spacing */
+.hero .background-image {
+  margin-top: 0 !important;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* Reduce top margin of overview section */
 #introduction.section {
-  padding-top: 0.5rem !important;
+  padding-top: 3rem !important;
 }
 
 /* Reduce hero section bottom spacing */
@@ -218,61 +217,17 @@ body {
   padding-bottom: 0 !important;
 }
 
-/* Ensure background image section has no extra spacing */
-.background-image-section {
-  margin-top: -3rem !important;
-  margin-bottom: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+/* Hero section background image styling */
+.hero .background-image {
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Force consistent spacing across all browsers */
-.background-image-section * {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Center the background image */
-.background-image-section img {
-  display: block;
-  margin: 0 auto !important;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Center the container and inner elements */
-.background-image-section .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.background-image-section .has-text-centered {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Ensure the image is perfectly centered */
-.background-image-section .background-image {
-  display: block;
-  margin: 0 auto !important;
-  max-width: 100%;
-  height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Additional fallback for spacing issues */
-.background-image-section {
-  line-height: 0 !important;
-  font-size: 0 !important;
+/* Hero section background image container */
+.hero .has-text-centered {
+  text-align: center;
+  margin-top: 0;
 }
 
 /* Reduce spacing between title and info boxes */
@@ -280,14 +235,26 @@ body {
   margin-bottom: 0.1rem !important;
 }
 
+/* Add space between subtitle and info boxes */
+.hero .title.is-2 {
+  margin-bottom: 2rem !important;
+}
+
 /* Reduce spacing between main title and subtitle */
 .hero .title.is-1 {
-  margin-bottom: 0.25rem !important;
+  margin-bottom: 3rem !important;
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+}
+
+.hero .title.is-2 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
 }
 
 /* Reduce spacing between info boxes and bottom */
 .hero .columns {
-  margin-bottom: 0 !important;
+  margin-bottom: 3rem !important;
   padding-bottom: 0 !important;
 }
 
@@ -375,6 +342,8 @@ body {
 .speakers-section .columns,
 .organizers-section .columns {
   margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .speakers-section .column,
@@ -548,6 +517,17 @@ video {
 .columns .column img {
   display: block;
   margin: 0 auto;
+}
+
+/* Center profile buttons in speaker/organizer cards */
+.card-content .button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-content .content {
+  text-align: center;
 }
 
 /* Ensure consistent text height for alignment */
