@@ -711,19 +711,43 @@ video {
   margin-top: auto;
 }
 
-/* Schedule styling */
+/* Schedule styling - Force override any conflicting styles */
+#schedule {
+  overflow: visible !important;
+}
+
+#schedule .schedule-container {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+#schedule .schedule-item {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  margin-bottom: 1rem !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  display: block !important;
+  width: 100% !important;
+}
+
 .schedule-container {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto !important;
+  display: block !important;
 }
 
 .schedule-item {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  margin-bottom: 1rem !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: box-shadow 0.3s ease !important;
+  display: block !important;
+  width: 100% !important;
 }
 
 .schedule-item:hover {
@@ -736,13 +760,14 @@ video {
 }
 
 .schedule-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e0e0e0;
-  border-radius: 8px 8px 0 0;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 1rem 1.5rem !important;
+  background-color: #f8f9fa !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  border-radius: 8px 8px 0 0 !important;
+  width: 100% !important;
 }
 
 .schedule-time {
@@ -758,7 +783,9 @@ video {
 }
 
 .schedule-content {
-  padding: 1.5rem;
+  padding: 1.5rem !important;
+  display: block !important;
+  width: 100% !important;
 }
 
 .schedule-topic {
