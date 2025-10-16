@@ -51,7 +51,7 @@
         <div class="column is-4">
           <div class="box has-text-centered">
             <p class="has-text-weight-bold">Time</p>
-            <p class="is-size-5">1:00 PM-5:00 PM(PST)</p>
+            <p class="is-size-5">1:00 PM-5:00 PM(HST)</p>
           </div>
         </div>
         <div class="column is-4">
@@ -195,57 +195,124 @@
   <div class="container is-max-desktop">
     <h2 class="title is-2 has-text-centered">Schedule</h2>
     <div class="content">
-      <table class="table is-fullwidth">
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Programme</th>
-            <th>Speaker</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1:00 PM - 1:10 PM</td>
-            <td>Introduction</td>
-            <td>Yangguang Li</td>
-          </tr>
-          <tr>
-            <td>1:10 PM - 1:50 PM</td>
-            <td>Diffusion-based modeling for 3D geometry and texture generation</td>
-            <td>Yangguang Li</td>
-          </tr>
-          <tr>
-            <td>1:50 PM - 2:00 PM</td>
-            <td>Coffee Break</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2:00 PM - 2:50 PM</td>
-            <td>Autoregressive paradigms for 3D generation</td>
-            <td>Angela Dai</td>
-          </tr>
-          <tr>
-            <td>2:50 PM - 3:00 PM</td>
-            <td>Coffee Break</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>3:00 PM - 3:50 PM</td>
-            <td>3D part generation</td>
-            <td>Minghao Chen</td>
-          </tr>
-          <tr>
-            <td>3:50 PM - 4:00 PM</td>
-            <td>Coffee Break</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>4:00 PM - 4:50 PM</td>
-            <td>3D material generation</td>
-            <td>Zhaoxi Chen</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="schedule-container">
+        <!-- Session 1 -->
+        <div class="schedule-item">
+          <div class="schedule-header">
+            <div class="schedule-time">1:00 PM - 1:50 PM</div>
+            <div class="schedule-speaker">Yangguang Li</div>
+          </div>
+          <div class="schedule-content">
+            <h4 class="schedule-topic">Diffusion Based 3D Assets Generation Foundation Models</h4>
+            <div class="abstract-toggle">
+              <button class="button is-small is-outlined abstract-btn" onclick="toggleAbstract('abstract1')">
+                <span class="icon"><i class="fas fa-chevron-down" id="icon1"></i></span>
+                <span>Abstract</span>
+              </button>
+            </div>
+            <div class="abstract-content" id="abstract1" style="display: none;">
+              <p>Unlike image and video generation, progress in the 3D generation field has been relatively slow. Initially, optimization routes, represented by DreamFusion, were explored. This was followed by the exploration of reconstruction routes, such as LRM. It was only later that diffusion-based 3D generation techniques, similar to those in image and video generation, were gradually developed.</p>
+              <p>This topic will discuss the most advanced 3D asset generation solutions, including 3D data preprocessing, VAE reconstruction, diffusion models and texture generation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coffee Break -->
+        <div class="schedule-item coffee-break">
+          <div class="schedule-header">
+            <div class="schedule-time">1:50 PM - 2:00 PM</div>
+            <div class="schedule-speaker">-</div>
+          </div>
+          <div class="schedule-content">
+            <h4 class="schedule-topic">Coffee Break</h4>
+          </div>
+        </div>
+
+        <!-- Session 2 -->
+        <div class="schedule-item">
+          <div class="schedule-header">
+            <div class="schedule-time">2:00 PM - 2:50 PM</div>
+            <div class="schedule-speaker">Angela Dai</div>
+          </div>
+          <div class="schedule-content">
+            <h4 class="schedule-topic">Can Transformers Speak Geometry? Autoregressive Mesh Generation</h4>
+            <div class="abstract-toggle">
+              <button class="button is-small is-outlined abstract-btn" onclick="toggleAbstract('abstract2')">
+                <span class="icon"><i class="fas fa-chevron-down" id="icon2"></i></span>
+                <span>Abstract</span>
+              </button>
+            </div>
+            <div class="abstract-content" id="abstract2" style="display: none;">
+              <p>What if generating a 3D mesh was as simple as predicting the next word in a sentence? Autoregressive modeling has emerged as a unifying paradigm across modalities, ranging from text to images. We will explore its application to 3D geometry, with a focus on mesh generation using transformers.</p>
+              <p>By treating meshes as sequences, we can extend next-token prediction to mesh faces to tackle the compact and irregular structure of human-modeled meshes. We will discuss various design choices (e.g., in sequence formulation), as well as practical obstacles (e.g., scaling to high-resolution meshes, speed), with applications ranging from interactive design tools to automated prototyping and simulation-ready content creation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coffee Break -->
+        <div class="schedule-item coffee-break">
+          <div class="schedule-header">
+            <div class="schedule-time">2:50 PM - 3:00 PM</div>
+            <div class="schedule-speaker">-</div>
+          </div>
+          <div class="schedule-content">
+            <h4 class="schedule-topic">Coffee Break</h4>
+          </div>
+        </div>
+
+        <!-- Session 3 -->
+        <div class="schedule-item">
+          <div class="schedule-header">
+            <div class="schedule-time">3:00 PM - 3:50 PM</div>
+            <div class="schedule-speaker">Minghao Chen</div>
+          </div>
+          <div class="schedule-content">
+            <h4 class="schedule-topic">From Whole to Parts: Part-Aware 3D Generation</h4>
+            <div class="abstract-toggle">
+              <button class="button is-small is-outlined abstract-btn" onclick="toggleAbstract('abstract3')">
+                <span class="icon"><i class="fas fa-chevron-down" id="icon3"></i></span>
+                <span>Abstract</span>
+              </button>
+            </div>
+            <div class="abstract-content" id="abstract3" style="display: none;">
+              <p>Generative models have unlocked impressive 3D generation, yet most pipeline still treat objects as monolithic shapes. Real objects are compositional. Modeling at the part level brings controllability, editability, and functional reasoning to 3D generation at scale. This talk surveys the emerging landscape of part-aware methods and how they change data, training, and evaluation.</p>
+              <p>I will first cover our recent works, PartGen and AutoPartGen, which use multi-view diffusion and autoregressive modeling to generate structured 3D assets. I will then highlight key open problems and future directions, including unsupervised part discovery, structural consistency, and integration with large-scale 3D foundation models. By focusing on compositionality, this talk will outline how part-level generation could be a foundation for the next wave of 3D generative research and applications.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coffee Break -->
+        <div class="schedule-item coffee-break">
+          <div class="schedule-header">
+            <div class="schedule-time">3:50 PM - 4:00 PM</div>
+            <div class="schedule-speaker">-</div>
+          </div>
+          <div class="schedule-content">
+            <h4 class="schedule-topic">Coffee Break</h4>
+          </div>
+        </div>
+
+        <!-- Session 4 -->
+        <div class="schedule-item">
+          <div class="schedule-header">
+            <div class="schedule-time">4:00 PM - 4:50 PM</div>
+            <div class="schedule-speaker">Zhaoxi Chen</div>
+          </div>
+          <div class="schedule-content">
+            <h4 class="schedule-topic">From Synthetic to Physical: Material Synthesis for 3D Assets</h4>
+            <div class="abstract-toggle">
+              <button class="button is-small is-outlined abstract-btn" onclick="toggleAbstract('abstract4')">
+                <span class="icon"><i class="fas fa-chevron-down" id="icon4"></i></span>
+                <span>Abstract</span>
+              </button>
+            </div>
+            <div class="abstract-content" id="abstract4" style="display: none;">
+              <p>Recent progress in generative 3D has made it easy to create shapes and scenes, but realistic materials—the appearance and behavior of surfaces under light and interaction—remain the bottleneck between compelling renderings and deployable digital/physical assets. We will first review material representations (BRDF/BSDF, SVBRDF, spatially varying microgeometry, and procedural graphs), differentiable rendering and inverse material capture, and the data/metrics landscape for perceptual and physical fidelity.</p>
+              <p>We then introduce synthetic material generation, 3DTopia-XL, which couples text/vision priors with scalable 3D material generation for editable, high-resolution assets; and PhysX-3D, which augments appearance models with physical constraints and affordance to align generated materials with real-world behavior. Future directions will be discussed by pushing materials from "looks right" to "acts right."</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -260,16 +327,16 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-1by1">
-              <img src="imgs/wanli_ouyang.jpg" alt="Wanli Ouyang">
+              <img src="imgs/xianglong.jpeg" alt="Xianglong He">
             </figure>
           </div>
           <div class="card-content has-text-centered">
             <div class="content">
-              <h4 class="title is-5">Wanli Ouyang</h4>
-              <p class="subtitle is-6">CUHK</p>
-              <a href="https://scholar.google.com/citations?user=pw_0Z_UAAAAJ&hl=zh-CN" target="_blank" class="button is-small is-outlined">
+              <h4 class="title is-5">Xianglong He</h4>
+              <p class="subtitle is-6">Tsinghua</p>
+              <a href="https://xianglonghe.github.io/" target="_blank" class="button is-small is-outlined">
                 <span class="icon"><i class="fas fa-external-link-alt"></i></span>
-                <span>Google Scholar</span>
+                <span>Website</span>
               </a>
             </div>
           </div>
@@ -402,6 +469,21 @@
   <script src="js/bulma-slider.min.js"></script>
   <script src="js/fontawesome.all.min.js"></script>
   <script src="js/index.js"></script>
+  
+  <script>
+    function toggleAbstract(abstractId) {
+      const abstract = document.getElementById(abstractId);
+      const icon = document.getElementById(abstractId.replace('abstract', 'icon'));
+      
+      if (abstract.style.display === 'none') {
+        abstract.style.display = 'block';
+        icon.className = 'fas fa-chevron-up';
+      } else {
+        abstract.style.display = 'none';
+        icon.className = 'fas fa-chevron-down';
+      }
+    }
+  </script>
 
 </body>
 </html>

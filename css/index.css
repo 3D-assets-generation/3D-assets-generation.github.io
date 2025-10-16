@@ -710,3 +710,124 @@ video {
 .generation-case img {
   margin-top: auto;
 }
+
+/* Schedule styling */
+.schedule-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.schedule-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.schedule-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.schedule-item.coffee-break {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 8px 8px 0 0;
+}
+
+.schedule-time {
+  font-weight: 600;
+  color: #495057;
+  font-size: 1.1rem;
+}
+
+.schedule-speaker {
+  font-weight: 500;
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.schedule-content {
+  padding: 1.5rem;
+}
+
+.schedule-topic {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.abstract-toggle {
+  margin-bottom: 1rem;
+}
+
+.abstract-btn {
+  border-color: #3273dc;
+  color: #3273dc;
+  transition: all 0.3s ease;
+}
+
+.abstract-btn:hover {
+  background-color: #3273dc;
+  color: white;
+  border-color: #3273dc;
+}
+
+.abstract-content {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid #3273dc;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.abstract-content p {
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.abstract-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive design for schedule */
+@media (max-width: 768px) {
+  .schedule-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .schedule-time {
+    font-size: 1rem;
+  }
+  
+  .schedule-speaker {
+    font-size: 0.9rem;
+  }
+  
+  .schedule-topic {
+    font-size: 1.1rem;
+  }
+  
+  .schedule-content {
+    padding: 1rem;
+  }
+  
+  .abstract-content {
+    padding: 1rem;
+  }
+}
